@@ -1,0 +1,33 @@
+
+// variable: 版权信息相关
+@sys-copyright-color: #999;
+@sys-copyright-link-color: #999;
+@sys-copyright-link-underline: true;
+
+
+
+// --------- 下面是具体样式定义 --------
+
+.copyright {
+    border-top: 1px solid #EDEDED;
+    margin-top: 30px;
+    padding-top: 4px;
+    color: @sys-copyright-color;
+    line-height: 20px;
+}
+
+.copyright a:link, 
+.copyright a:visited, 
+.copyright a:hover, 
+.copyright a:active {
+    color: @sys-copyright-link-color;
+
+    .sysm-copyright-link-underline(@has) when (@has = true) {
+        text-decoration: underline;
+    }
+    .sysm-copyright-link-underline(@has) when (@has = false) {
+        text-decoration: none;
+    }
+    .sysm-copyright-link-underline(@sys-copyright-link-underline);
+}
+

@@ -1,0 +1,110 @@
+
+// margin设置
+.sysm-margin(@margin) when not (@margin = 0) {
+    margin: @margin;
+}
+
+// padding设置
+.sysm-padding(@padding) when not (@padding = 0) {
+    padding: @padding;
+}
+
+// margin/padding/border 设置
+.sysm-margin-padding-border(
+    @margin,
+    @padding,
+    @border-width,
+    @border-style,
+    @border-color
+) {
+    .sysm-margin(@margin);
+    .sysm-padding(@padding);
+}
+
+.sysm-margin-padding-border(
+    @margin,
+    @padding,
+    @border-width,
+    @border-style,
+    @border-color
+) 
+    when (@border-width = 0)
+{
+    border: 0;
+}
+
+.sysm-margin-padding-border(
+    @margin,
+    @padding,
+    @border-width,
+    @border-style,
+    @border-color
+) 
+    when not (@border-width = 0)
+{
+    border-width: @border-width;
+    border-style: @border-style;
+    border-color: @border-color;
+}
+
+// 宽度设置
+.sysm-width(@length) when not (@length = false) {
+    width: @length;
+}
+
+
+// 浮动设置
+.sysm-float(@float) when not (@float = false) {
+    float: @float;
+}
+
+
+// 背景值设置
+.sysm-background(@bg) when not (@bg = false) {
+    background: @bg;
+}
+
+
+// 设置至上而下的线性渐变背景
+.sysm-background-top-linear(@gradient,@top-color,@bottom-color) {
+    background: average(@top-color, @bottom-color);
+}
+.sysm-background-top-linear(@gradient,@top-color,@bottom-color) 
+    when (@gradient = true) 
+{ 
+    background: -webkit-linear-gradient(top,@top-color,@bottom-color);
+    background: -moz-linear-gradient(top,@top-color,@bottom-color);
+    background: -ms-linear-gradient(top,@top-color,@bottom-color);
+    background: -o-linear-gradient(top,@top-color,@bottom-color);
+}
+
+
+
+// 页面最小宽度相关样式
+.sysm-layout-min-width(@min-width) when not (@min-width = false) {
+    *html .layout-ie6-out{
+        margin-left: @sys-min-width;
+        zoom: 1;
+    }
+
+    *html .layout-ie6-in{
+        position: relative;
+        float: left;
+        margin-left: -@sys-min-width;
+    }
+
+    .html { 
+        min-width: @sys-min-width;
+    }
+}
+
+// 侧边栏邻居元素相关样式
+.sysm-sidebar-neighbor-init(@has-sidebar) when (@has-sidebar = true) {
+    .main-area-sidebar-neighbor {
+        margin-left: 220px;
+    }
+
+    .main-area-sidebar-neighbor-hide {
+        margin-left: 30px;
+    }
+}
