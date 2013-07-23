@@ -2,11 +2,18 @@
     "name": "esf-ms",
     "version": "1.0.0",
     "contributors": [
-        { "name": "errorrik", "email": "errorrik@gmail.com" }
+        {
+            "name": "justineo",
+            "email": "justice360@gmail.com"
+        },
+        {
+            "name": "errorrik",
+            "email": "errorrik@gmail.com"
+        }
     ],
     "repository": "https://github.com/ecomfe/esf-ms",
     "dependencies": {
-        "est": "~1.0",
+        "est": "1.x"
     },
     "description": "Enterprise Style Framework for Manage System"
 }
