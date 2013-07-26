@@ -36,6 +36,17 @@
 @sys-has-sidebar: true;
 
 
+// variable: 侧边栏相关样式定义，当@sys-has-sidebar为true时生效
+
+@sys-sidebar-header-bg-gradient: true;
+@sys-sidebar-header-bg-top-color: #fff;
+@sys-sidebar-header-bg-bottom-color: #ebebeb;
+@sys-sidebar-header-font-size: false;
+@sys-sidebar-header-line-height: false;
+@sys-sidebar-header-color: false;
+@sys-sidebar-header-padding-left: 8px;
+
+
 // variable: 页面主区域与浏览器边缘的距离
 
 @sys-mainarea-margin: 10px 10px 0 0;
@@ -44,6 +55,24 @@
 // --------- 下面是具体样式定义 --------
 
 .global-reset();
+
+// 页面最小宽度相关样式
+.sysm-layout-min-width(@min-width) when not (@min-width = false) {
+    *html .layout-ie6-out{
+        margin-left: @sys-min-width;
+        zoom: 1;
+    }
+
+    *html .layout-ie6-in{
+        position: relative;
+        float: left;
+        margin-left: -@sys-min-width;
+    }
+
+    .html { 
+        min-width: @sys-min-width;
+    }
+}
 .sysm-layout-min-width(@sys-min-width);
 
 
@@ -57,4 +86,32 @@ body {
     margin: @sys-mainarea-margin;
 }
 
+
+// 侧边栏邻居元素相关样式
+.sysm-sidebar-neighbor-init(@has-sidebar) when (@has-sidebar = true) {
+    .main-area-sidebar-neighbor {
+        margin-left: 220px;
+    }
+
+    .main-area-sidebar-neighbor-hide {
+        margin-left: 30px;
+    }
+}
+
+// 侧边栏相关样式
+.sysm-sidebar(@has-sidebar) when (@has-sidebar = true) {
+    .ui-sidebar-head {
+        .sysm-background-top-linear(
+            @sys-sidebar-header-bg-gradient, 
+            @sys-sidebar-header-bg-top-color, 
+            @sys-sidebar-header-bg-bottom-color
+        );
+        padding-left: @sys-sidebar-header-padding-left;
+        .sysm-color(@sys-sidebar-header-color);
+        .sysm-font-size(@sys-sidebar-header-font-size);
+        .sysm-line-height(@sys-sidebar-header-line-height);
+    }
+}
+
 .sysm-sidebar-neighbor-init(@sys-has-sidebar);
+.sysm-sidebar(@sys-has-sidebar);

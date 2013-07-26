@@ -40,7 +40,7 @@
     @border-style,
     @border-color
 ) 
-    when not (@border-width = 0)
+    when not (@border-width = 0) and not (@border-width = false)
 {
     border-width: @border-width;
     border-style: @border-style;
@@ -52,6 +52,25 @@
     width: @length;
 }
 
+// 高度设置
+.sysm-height(@length) when not (@length = false) {
+    height: @length;
+}
+
+// 字体颜色设置
+.sysm-color(@color) when not (@color = false) {
+    color: @color;
+}
+
+// 字体大小设置
+.sysm-font-size(@size) when not (@size = false) {
+    font-size: @size;
+}
+
+// 字体行高设置
+.sysm-line-height(@length) when not (@length = false) {
+    line-height: @length;
+}
 
 // 浮动设置
 .sysm-float(@float) when not (@float = false) {
@@ -79,32 +98,3 @@
 }
 
 
-
-// 页面最小宽度相关样式
-.sysm-layout-min-width(@min-width) when not (@min-width = false) {
-    *html .layout-ie6-out{
-        margin-left: @sys-min-width;
-        zoom: 1;
-    }
-
-    *html .layout-ie6-in{
-        position: relative;
-        float: left;
-        margin-left: -@sys-min-width;
-    }
-
-    .html { 
-        min-width: @sys-min-width;
-    }
-}
-
-// 侧边栏邻居元素相关样式
-.sysm-sidebar-neighbor-init(@has-sidebar) when (@has-sidebar = true) {
-    .main-area-sidebar-neighbor {
-        margin-left: 220px;
-    }
-
-    .main-area-sidebar-neighbor-hide {
-        margin-left: 30px;
-    }
-}
