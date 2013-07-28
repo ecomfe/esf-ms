@@ -65,7 +65,7 @@
 
 // variable: 列表 操作区域 相关
 @sys-list-operator-margin: 0;
-@sys-list-operator-padding: 5px;
+@sys-list-operator-padding: 10px 8px;
 @sys-list-operator-border-width: 0 1px;
 @sys-list-operator-border-color: #ddd;
 @sys-list-operator-border-style: solid;
@@ -123,12 +123,11 @@
         @sys-list-summary-border-style,
         @sys-list-summary-border-color
     );
-}
 
-
-.list-summary li {
-    .sysm-float(@sys-list-summary-item-float);
-    .sysm-width(@sys-list-summary-item-width);
+    li {
+        .sysm-float(@sys-list-summary-item-float);
+        .sysm-width(@sys-list-summary-item-width);
+    }
 }
 
 
@@ -160,15 +159,14 @@
         @sys-list-functional-tab-border-style,
         @sys-list-functional-tab-border-color
     );
-}
 
-
-.list-functional-tab .ui-tab-navigator {
-    border: 0;
-    position: relative;
-    top: 1px;
-    overflow: visible;
-    height: @sys-list-tab-item-height;
+    .ui-tab-navigator {
+        border: 0;
+        position: relative;
+        top: 1px;
+        overflow: visible;
+        height: @sys-list-tab-item-height;
+    }
 }
 
 
@@ -241,14 +239,13 @@
         @sys-list-operator-border-style,
         @sys-list-operator-border-color
     );
-}
 
-
-.list-operator .ui-commandmenu,
-.list-operator .ui-button,
-.list-operator .ui-select {
-    .inline-block();
-    margin-right: @sys-list-operator-gap;
+    .ui-commandmenu,
+    .ui-button,
+    .ui-select {
+        .inline-block();
+        margin-right: @sys-list-operator-gap;
+    }
 }
 
 
