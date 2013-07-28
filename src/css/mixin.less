@@ -67,6 +67,11 @@
     font-size: @size;
 }
 
+// 字体设置
+.sysm-font-family(@family) when not (@size = family) {
+    font-family: @family;
+}
+
 // 字体行高设置
 .sysm-line-height(@length) when not (@length = false) {
     line-height: @length;
