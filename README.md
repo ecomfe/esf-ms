@@ -1,7 +1,7 @@
 ESF-MS
 ==============
 
-**ESF-MS** 是基于 `管理端业务系统特点` 抽象的 `样式与布局框架`，依赖与 [LESS](http://github.com/cloudhead/less.js) 与[EST](https://github.com/ecomfe/est)。
+**ESF-MS** 是基于 `管理端业务系统特点` 抽象的 `样式与布局框架`，依赖于 [LESS](http://github.com/cloudhead/less.js) 与 [EST](https://github.com/ecomfe/est)。
 
 **ESF-MS** 的抽象包括常用部件的 `className`，相应的`html结构`，常变更样式点的`variable`。
 
