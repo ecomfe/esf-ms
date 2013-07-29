@@ -12,9 +12,9 @@
 // variable: 主导航条相关
 @sys-nav-left-gap: 20px;
 @sys-nav-height: 29px;
-@sys-nav-border-length: 1px;
-@sys-nav-border-color: #79a3ff;
-@sys-nav-border-color-current: #fff;
+@sys-nav-item-border-top-length: 1px;
+@sys-nav-item-border-top-color: #79a3ff;
+@sys-nav-item-border-top-color-current: #fff;
 @sys-nav-font-size: 14px;
 @sys-nav-item-gap: 5px;
 @sys-nav-item-padding: 0 12px;
@@ -80,7 +80,7 @@
     }
     .sysm-nav-item-border-radius(@sys-nav-item-radius);
 
-    border-top: @sys-nav-border-length solid @sys-nav-border-color;
+    border-top: @sys-nav-item-border-top-length solid @sys-nav-item-border-top-color;
     font-size: @sys-nav-font-size;
     height: @sys-nav-height - @sys-nav-border-length;
     line-height: @sys-nav-height;
@@ -94,7 +94,7 @@
 }
 
 .nav .nav-item-current {
-    border-top: @sys-nav-border-length solid @sys-nav-border-color-current;
+    border-top: @sys-nav-item-border-top-length solid @sys-nav-item-border-top-color-current;
 
     .sysm-background-top-linear(
         @sys-nav-item-bg-gradient, 
