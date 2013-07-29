@@ -105,12 +105,11 @@ var NEIGHBOR_AUTOHIDE_CLASS = 'main-area-sidebar-neighbor-hide';
 
 sidebar.onmodechange = function ( sidebarArg ) {
     var neighborExtraClass = NEIGHBOR_AUTOHIDE_CLASS;
-
     if ( sidebarArg.mode === 'fixed' ) {
         neighborExtraClass = NEIGHBOR_FIXED_CLASS;
     }
 
     var neighbor = document.getElementById( NEIGHBOR_ID );
-    neighbor.className = NEIGHBOR_CLASS + ' ' + neighborExtraClass
+    neighbor.className = NEIGHBOR_CLASS + ' ' + neighborExtraClass;
 };
 ```
