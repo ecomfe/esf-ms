@@ -7,7 +7,7 @@ copyright
 class name
 -----
 
-+ `copyright` - 作用于版权信息容器元素
++ `copyright`: 作用于版权信息容器元素
 
 less variable
 ---------
