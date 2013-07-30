@@ -174,7 +174,7 @@ list
 + `@sys-list-page-info-background`: #f9f9f9; 页信息条背景颜色。
 
 
-列表页面HTML示例
+列表HTML示例
 -------
 
 
@@ -182,6 +182,7 @@ list
 <div class="list-header">
     header content and controls
 </div>
+
 <div class="list-functional-block">
     <div class="list-date-range"><input data-ui="id:ListDateRange;type:RangeCalendar" ></div>
     <ul class="list-summary">
@@ -197,7 +198,6 @@ list
     </ul>
 </div>
 
-
 <div class="list-functional-tab" data-ui-type="Tab" data-ui-id="ListTab"></div>
 
 <div class="list-operator">
@@ -206,6 +206,8 @@ list
     <div data-ui="type:CommandMenu;id:PlanToggle"></div>
     <div data-ui="type:Button;id:PlanDelete">删除</div>
 </div>
+
 <div class="list-table" data-ui="type:Table;id:ListTable" data-ui-extension-command-type="Command" data-ui-extension-tableedit-type="TableEdit"></div>
+
 <div data-ui="type:Pager;id:ListPager;skin:table-pager"></div>
 ```
