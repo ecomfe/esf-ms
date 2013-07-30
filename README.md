@@ -134,10 +134,10 @@ ESF-MS
                  <div data-ui-type="Tree" data-ui-id="accountTree"></div>
             </div>
         </div>
-        <div class="main-area" id="main-area">
-            <div id="main"></div>
-            <div class="copyright">©2013 Baidu</div>
-        </div>
+        <ul class="user-info">
+            <li class="user-name"><a>username</a></li>
+            <li><a href="/user/logout">退出</a></li>
+        </ul>
     </div>
     <!--[if IE 6]></div></div><![endif]-->
 
