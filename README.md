@@ -94,3 +94,61 @@ ESF-MS
 
 ![Manage System](https://raw.github.com/ecomfe/esf-ms/master/doc/sys.png)
 
+
+例子：一个典型的管理端系统HTML结构
+------
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="src/common/css/main.less" />
+
+    <script src="http://s1.bdstatic.com/r/www/cache/ecom/esl/1-4-2/esl.js"></script>
+</head>
+<body>
+    <!--[if IE 6]>
+    <div class="layout-ie6-out"><div class="layout-ie6-in">
+    <![endif]-->
+
+    <div class="header">
+        <a class="logo" href="#" target="_blank"><img alt="" title="" src="src/img/logo.png" width="98" height="32"></a>
+        <ul class="nav">
+            <li class="nav-current"><a href="#">首页</a></li>
+            <li><a href="#">导航1</a></li>
+            <li><a href="#">导航2</a></li>
+        </ul>
+        <div class="user-info">
+            <a class="user-name"></a>
+            <a href="/user/logout">退出</a>
+        </div>
+    </div>
+
+    <div>
+        <div data-ui-type="Sidebar" data-ui-id="accountSidebar">
+            <div>Sidebar Title</div>
+            <div>
+                 <div data-ui-type="Tree" data-ui-id="accountTree"></div>
+            </div>
+        </div>
+        <div class="main-area" id="main-area">
+            <div id="main"></div>
+            <div class="copyright">©2013 Baidu</div>
+        </div>
+    </div>
+    <!--[if IE 6]></div></div><![endif]-->
+
+    <script>
+    require.config( { ...... } );
+    require( [ 'common/main' ] , function ( main ) {
+        main.init();
+    });
+    </script>
+</body>
+</html>
+```
+
+
