@@ -3,24 +3,6 @@ header
 
 **ESF-MS** 提供了系统页头部分的样式支持。
 
-示例HTML
------
-
-```html
-<div class="header">
-    <a class="logo" href="#" target="_blank"><img alt="百度推广" title="百度推广" src="src/img/logo.png" width="98" height="32"></a>
-    <ul class="nav">
-        <li class="nav-item-current"><a href="#">首页</a></li>
-        <li><a href="#/">推广管理</a></li>
-        <li><a href="#/">数据报告</a></li>
-    </ul>
-    <ul class="user-info">
-        <li class="user-name"><a>username</a></li>
-        <li><a href="/user/logout">退出</a></li>
-    </ul>
-</div>
-```
-
 
 header容器
 ----
@@ -98,4 +80,21 @@ logo
 + `@sys-userinfo-item-padding`: 0 10px; 用户信息项内边距。
 + `@sys-userinfo-username-bold`: true; 用户名项是否加粗。
 
+HTML示例
+-----
+
+```html
+<div class="header">
+    <a class="logo" href="#" target="_blank"><img alt="百度推广" title="百度推广" src="src/img/logo.png" width="98" height="32"></a>
+    <ul class="nav">
+        <li class="nav-item-current"><a href="#">首页</a></li>
+        <li><a href="#/">推广管理</a></li>
+        <li><a href="#/">数据报告</a></li>
+    </ul>
+    <ul class="user-info">
+        <li class="user-name"><a>username</a></li>
+        <li><a href="/user/logout">退出</a></li>
+    </ul>
+</div>
+```
 
