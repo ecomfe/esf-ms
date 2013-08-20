@@ -68,7 +68,7 @@
 }
 
 // 字体设置
-.sysm-font-family(@family) when not (@size = family) {
+.sysm-font-family(@family) when not (@family = false) {
     font-family: @family;
 }
 
