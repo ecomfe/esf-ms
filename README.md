@@ -129,15 +129,15 @@ ESF-MS
 
     <div>
         <div data-ui-type="Sidebar" data-ui-id="accountSidebar">
-            <div>Sidebar Title</div>
+            <div>侧边栏header标题文字</div>
             <div>
                  <div data-ui-type="Tree" data-ui-id="accountTree"></div>
             </div>
         </div>
-        <ul class="user-info">
-            <li class="user-name"><a>username</a></li>
-            <li><a href="/user/logout">退出</a></li>
-        </ul>
+        <div class="main-area" id="main-area">
+            <div id="main"></div>
+            <div class="copyright">©2013 Baidu</div>
+        </div>
     </div>
     <!--[if IE 6]></div></div><![endif]-->
 
